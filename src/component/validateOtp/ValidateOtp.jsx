@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./ValidateOtp.css";
 import Swal from "sweetalert2";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import VisitorPass from "../../reuseable/VisitorPass";
+import { useNavigate } from "react-router-dom";
+import { clearSecurityData } from "../../app/SecuritySlice";
 
 function ValidateOtp() {
   const [isValid, setIsValid] = useState(false);
@@ -15,6 +17,9 @@ function ValidateOtp() {
 
   const [showValidateOtp, setShowValidateOtp] = useState(true);
   const [showFindVisitorPass, setShowFindVisitorPass] = useState(true);
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const securityData = useSelector((state) => state.security.securityData);
 
@@ -35,6 +40,11 @@ function ValidateOtp() {
   const handleOtpChange = (event) => setOtpInput(event.target.value);
 
   const handlePassChange = (event) => setPassInput(event.target.value);
+
+  const handleLogout = () => {
+    dispatch(clearSecurityData());
+    navigate("/signin");
+  };
 
   const handleValidateOtp = async () => {
     const validateRequest = {
@@ -114,6 +124,9 @@ function ValidateOtp() {
   return (
     <div>
       <div className="otp-validator">
+        <p className="logout-link" onClick={handleLogout}>
+          Logout
+        </p>
         <h2>Visitor OTP Validator</h2>
 
         {showValidateOtp && !isValid ? (

@@ -6,9 +6,10 @@ import { clearTenant } from "../../app/TenantSlice";
 
 const OtpGenerator = () => {
   const [otp, setOtp] = useState("");
+  const [visitorNameInput, setVistorNameInput] = useState("");
 
   const userData = useSelector((state) => state.tenant.tenantData);
-  console.log(userData);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogout = () => {
@@ -16,28 +17,33 @@ const OtpGenerator = () => {
     navigate("/signin");
   };
   const generateOtp = async () => {
-    const tenantInfo = {
-      firstName: userData.firstName,
-      lastName: userData.lastName,
-      phoneNumber: userData.phoneNumber,
-    };
-    try {
-      const response = await fetch("http://localhost:8080/tenant/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(tenantInfo),
-      });
-      if (!response.ok) throw new Error("Request Failed");
-      const data = await response.json();
+    if (!visitorNameInput) alert("Enter Visitor name to proceed");
+    else {
+      const tenantInfo = {
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        phoneNumber: userData.phoneNumber,
+        apartmentId: userData.apartmentId,
+        visitorName: visitorNameInput,
+      };
+      try {
+        const response = await fetch("http://localhost:8080/tenant/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(tenantInfo),
+        });
+        if (!response.ok) throw new Error("Request Failed");
+        const data = await response.json();
 
-      if (data.success) {
-        setOtp(data.code);
-        setTimeout(() => {
-          window.location.reload();
-        }, 10000);
+        if (data.success) {
+          setOtp(data.code);
+          setTimeout(() => {
+            window.location.reload();
+          }, 10000);
+        }
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      console.error(error);
     }
   };
 
@@ -55,6 +61,7 @@ const OtpGenerator = () => {
         placeholder="Visitor Name"
         required
         className="visitorName-input"
+        onChange={(e) => setVistorNameInput(e.target.value)}
       />
       <p>Click the button below to generate a One-Time Password (OTP)</p>
       <button className="generate-btn" onClick={generateOtp}>

@@ -1,7 +1,7 @@
 import "./VisitorPass.css";
 import Swal from "sweetalert2";
 function VisitorPass({ pass, dateTime, timeOut, buttonName }) {
-  const { id, open } = pass || {};
+  const { id, open, securityName } = pass || {};
 
   const handleRefresh = () => {
     window.location.reload();
@@ -50,6 +50,9 @@ function VisitorPass({ pass, dateTime, timeOut, buttonName }) {
         <p>
           <strong>Phone Number:</strong> {pass?.otp?.userPhoneNumber}
         </p>
+        <p>
+          <strong>Apartment Id:</strong> {pass?.otp?.apartmentId}
+        </p>
 
         <h4>Visitor Pass:</h4>
         <p>
@@ -58,9 +61,7 @@ function VisitorPass({ pass, dateTime, timeOut, buttonName }) {
         <p>
           <strong>Visitor's Name:</strong> {pass?.otp?.visitorName}
         </p>
-        <p>
-          <strong>Tenant's Address:</strong> {pass?.otp?.tenantAddress}
-        </p>
+
         <p>
           <strong>Time In:</strong> {dateTime}
         </p>
@@ -69,6 +70,9 @@ function VisitorPass({ pass, dateTime, timeOut, buttonName }) {
         </p>
         <p>
           <strong>Time Out:</strong> {timeOut || "N/A"}
+        </p>
+        <p>
+          <strong>Security On Duty:</strong> {securityName}
         </p>
         {buttonName === "Exit" ? (
           <button

@@ -17,11 +17,13 @@ const Signin = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
+    e.preventDefault();
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+    // setFormData((prev)=> ...prev, [name]: value)
   };
 
   const handleSubmit = (e) => {
@@ -62,6 +64,7 @@ const Signin = () => {
           firstName: data.firstName,
           lastName: data.lastName,
           phoneNumber: data.phoneNumber,
+          apartmentId: data.apartmentId,
         };
 
         dispatch(setUserData(user));
