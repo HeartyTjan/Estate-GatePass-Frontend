@@ -1,0 +1,124 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+.logout {
+  text-align: right;
+  font-size: 16px;
+  margin-top: -15px;
+  color: #4caf50;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.logout:hover {
+  color: #434343;
+}
+.visitorText {
+  display: block;
+  margin-bottom: 10px;
+}
+.visitorName-input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: -15px;
+}
+
+.visitorName-input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.otp-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.otp-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.otp-container h2 {
+  font-size: 2rem;
+  color: #4caf50;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.generate-btn {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.generate-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.generate-btn:active {
+  background-color: #388e3c;
+  transform: scale(1);
+}
+
+.otp-display {
+  margin-top: 30px;
+}
+
+.otp-display h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.otp-code {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50;
+  background-color: #f0f9f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 480px) {
+  .otp-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .otp-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .generate-btn {
+    font-size: 1rem;
+  }
+
+  .otp-code {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,127 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #333;
+  border: groove;
+}
+
+.signupSecurity-container {
+  width: 100%;
+  height: 750px;
+  max-width: 600px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.signupSecurity-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4caf50;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.signupSecurity-form {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.securityInput-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.securityInput-group > label {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+#signIn-link {
+  text-decoration: none;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  margin-left: 10px;
+}
+#signIn-link:hover {
+  font-size: 15px;
+  color: #666;
+}
+
+.securityInput-group > input {
+  padding: 5px;
+  font-size: 1rem;
+  border: groove;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.securityInput-group > input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.signupSecurity-btn {
+  padding: 14px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signupSecurity-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.signupSecurity-btn:active {
+  background-color: #388e3c;
+  transform: scale(1);
+}
+
+/* .role-selection {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.role-selection label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.role-selection input {
+  margin-right: 5px;
+} */
+.signupSecurity-p {
+}
+
+@media (max-width: 480px) {
+  .signupSecurity-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .signupSecurity-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .securityInput-group input {
+    font-size: 0.95rem;
+  }
+
+  .signupSecurity-btn {
+    font-size: 1rem;
+  }
+}

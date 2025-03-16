@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.otp-validator {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  border: groove;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+h3 {
+  color: #28a745;
+  text-align: center;
+}
+
+h4 {
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .otp-validator {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    border: groove;
+    box-sizing: border-box;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: #28a745;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  h4 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+
+  strong {
+    color: #007bff;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .findVisitorPass {
+    border: groove;
+    margin-top: 30px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box;
+  }
+  margin: 5px 0;
+}
+
+strong {
+  color: #007bff;
+}
+
+.validateOtp-input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.validateOtp-input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.findVisitorPass {
+  border: groove;
+  margin-top: 30px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
